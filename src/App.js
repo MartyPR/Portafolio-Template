@@ -1,10 +1,14 @@
-import logo from './logo.svg';
+
+import React from 'react';
+import Nabvar from './components/Navbar/Nabvar';
 
 
 function App() {
   return (
-    <div className="App">
-      <h1>Portafolio</h1>
+    
+    <div>
+       <Nabvar/>
+      
     </div>
   );
 }

@@ -1,6 +1,21 @@
-body {
+
+:root {
+  --text-color: #202023;
+  --background-color: RGBA(255, 255, 255, 0.92);
+  --text-color-dark:RGBA(255, 255, 255, 0.92);
+  --background-color-dark: #202023;
+}
+
+
+*{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+body {
+  font-size: 1.3rem;
+  line-height:0;
+  font-family: "Roboto", sans-serif;
+
+} 
 
