@@ -1,24 +1,26 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import logo from "../../assets/Logo.png";
 import "./Nabvar.css";
+import { ThemeContext } from "../ThemeContext";
+
 
 
 const Nabvar = () => {
-  const [darkMode, setDarkMode] = useState(false);
+  const {darkMode, toggleDarkMode} = useContext(ThemeContext);
   const [menuOpen, setMenuOpen] = useState(false);
 
-  const toggleDarkMode=()=>{
-    setDarkMode(!darkMode);
-    document.body.classList.toggle('dark-mode',!darkMode);
+  // const toggleDarkMode=()=>{
+  //   setDarkMode(!darkMode);
+  //   document.body.classList.toggle('dark-mode',!darkMode);
 
-  }
+  // }
 
   const handleMenuToggle = () => {
     setMenuOpen(!menuOpen);
   };
   return (
     <nav className={darkMode ? 'SunMode':''}>
-      <div className="container">
+      <div className="navContainer">
         <div className="logoContainer">
           <a className="nav-log">
             <img className="logoImg" src={logo} alt="logo" />

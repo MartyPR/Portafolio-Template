@@ -1,38 +1,36 @@
 body {
   background-color: var(--background-color-dark);
-  color:var( --text-color-dark);
+  color: var(--text-color-dark);
 }
 
 body.dark-mode {
-  background-color: var( --background-color);
-  color:  var(--text-color);
+  background-color: var(--background-color);
+  color: var(--text-color);
 }
-
 
 nav {
   border-width: 0;
   position: fixed;
   width: 100%;
   display: block;
-  /* background-color: #ffffff40; */
+
   backdrop-filter: blur(10px);
   z-index: 2;
-  padding: 0.5rem;
+
   padding-top: 26px;
 }
-.container {
-  max-width: 768px;
+
+.navContainer {
+  max-width: 1100px;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  
 }
 
 .logoContainer {
-
+  margin-top: 10px;
   letter-spacing: -1px;
-
 }
 
 .nav-log {
@@ -57,17 +55,16 @@ nav {
 
 .nameLogo {
   font-weight: bold;
-  font-size: 22px;
+  font-size: 1.5rem;
   margin-left: 10px;
 }
 
 .nav-links {
   display: flex;
-  gap: 1rem;
-  
+  gap: 1.0rem;
+  margin-left: -450px;
 }
 .nav-links a {
-
   list-style: none;
   text-decoration: none;
   color: inherit;
@@ -87,11 +84,14 @@ nav {
 .menu-dropdown {
   display: none;
   position: absolute;
-  top: 60px;
+  top: 70px;
   right: 10px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
   z-index: 3;
   padding: 15px 30px 15px 30px;
+  background-color: var(--background-color-dark);
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
 }
 
 .menu-dropdown a {
@@ -101,24 +101,20 @@ nav {
   color: inherit;
   /* color: RGBA(255, 255, 255, 0.92); */
 }
-.menu-dropdown.dark-mode{
-    color: #202023;
-    background-color: var( --background-color) ;
+.menu-dropdown.dark-mode {
+  color: #202023;
+  background-color: var(--background-color);
 }
-
-
 
 .theme-toggle-button {
   display: inline-block;
-  width: 32px;
+  width: 38px;
   height: 2px;
   margin: 0 20px 0 0;
 }
-.theme-toggle-button:hover{
-    
-        animation: rotate-complete 0.5s;
-        cursor: pointer;
-    
+.theme-toggle-button:hover {
+  animation: rotate-complete 0.5s;
+  cursor: pointer;
 }
 
 /**Media Mobile**/
@@ -131,6 +127,7 @@ nav {
     display: inline-block;
     margin-right: 15px;
     cursor: pointer;
+    width: 38px;
   }
   .menu-dropdown {
     display: block;
@@ -141,8 +138,8 @@ nav {
     color: #202023;
     border-radius: 10px;
   }
-  .menu-dropdown.dark-mode a:hover{
-    background-color:var(  --background-color-dark);
+  .menu-dropdown.dark-mode a:hover {
+    background-color: var(--background-color-dark);
     color: RGBA(255, 255, 255, 0.92);
     border-radius: 10px;
   }
@@ -200,11 +197,11 @@ nav {
   }
 }
 
-@keyframes rotate-complete  {
-    0% {
-        transform: rotate(0);
-      }
-      100% {
-        transform: rotate(-360deg);
-      }
+@keyframes rotate-complete {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
 }
