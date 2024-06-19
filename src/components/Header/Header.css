@@ -14,12 +14,12 @@
   }
 
   @media (max-width: 768px) {
-    margin: 0 ;
+    margin: 0;
     width: 85%;
   }
 
   @media (max-width: 480px) {
-    margin: 0 -20px; /* Márgenes del 2% del ancho total de la pantalla para pantallas muy pequeñas */
+    margin: 0 -20px;
   }
 }
 
@@ -60,7 +60,7 @@
 .right {
   flex-shrink: 0;
   text-align: center;
-  margin-top: 16px;
+  margin-top: 20px;
 }
 @media (min-width: 768px) {
   .right {
@@ -70,21 +70,102 @@
 }
 
 .ProfileImage {
-  border-color: RGBA(255, 255, 255, 0.8);
+  /* border-color: RGBA(255, 255, 255, 0.8);
   border-width: 2px;
-  border-style: solid;
-  width: 120px;
-  height: 120px;
+  border-style: solid; */
+  width: 150px;
+  height: 150px;
+  position: relative;
   display: inline-block;
   border-radius: 50%;
   overflow: hidden;
+  cursor: pointer;
+  background-color: black;
+  align-items: center;
+  justify-items: center;
 }
-.profilePhoto {
-  width: 120px;
-  height: 120px;
+
+.ProfileImage::before {
+  content: "";
+  position: absolute;
+  inset: -10px 40px;
+  background: linear-gradient(315deg, #b20101, #a34400);
+  transition: 0.5s;
+  animation: rotate 4s linear infinite;
 }
+.ProfileImage:hover::before {
+  inset: -10px -10px;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  0% {
+    transform: rotate(360deg);
+  }
+}
+.ProfileImage::after {
+  content: "";
+  position: absolute;
+  inset: 4px;
+  background: var(--background-color-dark);
+  border-radius: 50%;
+  z-index: 1;
+}
+.contentPhoto{
+  position: absolute;
+  inset: 1px;
+  border: 2px solid black;
+  z-index: 3;;
+  border-radius: 50%;
+}
+
+ .profilePhoto {
+  
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.5s;
+  pointer-events: none;
+  border-radius: 50%;
+} 
+  
+
 @media (min-width: 768px) {
   .header-content {
     display: flex;
+  }
+}
+
+.head-introduction:hover {
+  animation: vibrate 0.4s linear both;
+}
+
+/* .ProfileImage:hover {
+  animation: vibrate 0.7s linear both;
+} */
+
+@keyframes vibrate {
+  0% {
+    transform: translate(0);
+  }
+  20% {
+    transform: translate(-2px, 2px);
+  }
+  40% {
+    transform: translate(-2px, -2px);
+  }
+  60% {
+    transform: translate(2px, 2px);
+  }
+  80% {
+    transform: translate(2px, -2px);
+  }
+  100% {
+    transform: translate(0);
   }
 }

@@ -62,7 +62,7 @@ nav {
 .nav-links {
   display: flex;
   gap: 1.0rem;
-  margin-left: -450px;
+  margin-left: -200px;
 }
 .nav-links a {
   list-style: none;

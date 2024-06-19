@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import "./Header.css";
 import { ThemeContext } from '../ThemeContext';
 import logo from "../../assets/Logo.png";
+    
 
 const Header = () => {
   const { darkMode } = useContext(ThemeContext);
@@ -19,10 +20,10 @@ const Header = () => {
         </p>
         </div>
         <div className='right'>
-
-        
         <div className='ProfileImage'>
+          <div className='contentPhoto'>
         <img className='profilePhoto' src={logo} alt='profilePhoto'></img>
+        </div>
       </div>
       </div>
       </div>
