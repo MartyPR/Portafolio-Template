@@ -13,6 +13,7 @@ function App() {
        <Nabvar/>
        <div className='pageContainer'>
        <Header/>
+
        </div>
        
        </ThemeProvider>

@@ -3,10 +3,8 @@ import logo from "../../assets/Logo.png";
 import "./Nabvar.css";
 import { ThemeContext } from "../ThemeContext";
 
-
-
 const Nabvar = () => {
-  const {darkMode, toggleDarkMode} = useContext(ThemeContext);
+  const { darkMode, toggleDarkMode } = useContext(ThemeContext);
   const [menuOpen, setMenuOpen] = useState(false);
 
   // const toggleDarkMode=()=>{
@@ -19,7 +17,7 @@ const Nabvar = () => {
     setMenuOpen(!menuOpen);
   };
   return (
-    <nav className={darkMode ? 'SunMode':''}>
+    <nav className={darkMode ? "SunMode" : ""}>
       <div className="navContainer">
         <div className="logoContainer">
           <a className="nav-log">
@@ -28,16 +26,16 @@ const Nabvar = () => {
           </a>
         </div>
 
-        <div className="nav-links">
-          <a href="/Home">Works</a>
+        <div className="button-options">
+          <div className="nav-links">
+            <a href="/Home">Works</a>
 
-          <a href="/">Linkedin</a>
+            <a href="/">Linkedin</a>
 
-          <a href="/Home">Projects</a>
+            <a href="/Home">Projects</a>
 
-          <a href="/Home">Github</a>
-        </div>
-        <div className="button-options" >
+            <a href="/Home">Github</a>
+          </div>
           <div className="theme-toggle-button" onClick={toggleDarkMode}>
             {darkMode ? (
               <i className="fa-solid fa-moon fa-2xl  swing-bottom"></i>
@@ -55,7 +53,7 @@ const Nabvar = () => {
           {/* <FontAwesomeIcon icon="fa-solid fa-bars" /> */}
         </div>
         {menuOpen && (
-          <div className={`menu-dropdown  ${darkMode ? 'dark-mode' : ''}`} >
+          <div className={`menu-dropdown  ${darkMode ? "dark-mode" : ""}`}>
             <a href="/">about</a>
             <a href="/">Works</a>
             <a href="/">Wallpapers</a>

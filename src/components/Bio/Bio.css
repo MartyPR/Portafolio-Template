@@ -1,0 +1,12 @@
+
+.parts-bio{
+    padding-left: 3.4em;
+    text-indent: -3.4em;    
+   
+}
+
+.parts-bio span{
+    font-weight:bold ;
+    margin-right: 1em;
+    color: #e73f3f;;
+}

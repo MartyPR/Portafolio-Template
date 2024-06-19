@@ -1,5 +1,5 @@
 .head-container {
-  position: fixed;
+  position: absolute;
   top: 80px;
   left: 50%;
   transform: translateX(-50%);
@@ -7,10 +7,9 @@
   width: 45%;
   margin: 0 auto;
   max-width: 1200px;
-
+height: 100vh;
   @media (max-width: 1200px) {
-    margin: 0 3%; /* Márgenes del 5% del ancho total de la pantalla */
-    width: 60%;
+    width: 70%;
   }
 
   @media (max-width: 768px) {
@@ -41,16 +40,12 @@
   display: flex;
   flex-direction: column;
 }
-@media (min-width: 768px) {
-  .header-content {
-    flex-direction: row;
-  }
-}
 
 .infoProfile {
   flex-grow: 1;
   justify-content: center; /* Centra horizontalmente */
   align-items: center;
+  margin-top:20px;
 }
 .titleName {
   font-size: 2.5rem;
@@ -62,17 +57,22 @@
   text-align: center;
   margin-top: 20px;
 }
+
 @media (min-width: 768px) {
   .right {
     margin-top: 0;
     margin-left: 24px;
   }
+  .header-content {
+    display: flex;
+  }
+  .header-content {
+    flex-direction: row;
+  }
 }
-
+/*! Animation for Profile Imagen-----------------------  */
 .ProfileImage {
-  /* border-color: RGBA(255, 255, 255, 0.8);
-  border-width: 2px;
-  border-style: solid; */
+  
   width: 150px;
   height: 150px;
   position: relative;
@@ -80,19 +80,27 @@
   border-radius: 50%;
   overflow: hidden;
   cursor: pointer;
-  background-color: black;
+  background-color: rgb(22, 22, 22);
   align-items: center;
   justify-items: center;
+}
+.ProfileImage.dark-mode{
+  background-color : #969696 ;
 }
 
 .ProfileImage::before {
   content: "";
   position: absolute;
-  inset: -10px 40px;
-  background: linear-gradient(315deg, #b20101, #a34400);
+  inset: -10px 30px;
+  background: linear-gradient(315deg, #e73f3f, #e73f3f);
   transition: 0.5s;
   animation: rotate 4s linear infinite;
 }
+.ProfileImage.dark-mode::before{
+  background: linear-gradient(315deg, black, black);
+}
+
+
 .ProfileImage:hover::before {
   inset: -10px -10px;
 }
@@ -105,24 +113,30 @@
     transform: rotate(360deg);
   }
 }
+
 .ProfileImage::after {
   content: "";
   position: absolute;
-  inset: 4px;
+  inset: 5px;
   background: var(--background-color-dark);
   border-radius: 50%;
   z-index: 1;
 }
+.ProfileImage.dark-mode::after{
+  background: rgb(255, 255, 255);
+}
 .contentPhoto{
   position: absolute;
-  inset: 1px;
-  border: 2px solid black;
+  inset: 4px;
+  border: 1px solid rgb(22, 22, 22);
   z-index: 3;;
   border-radius: 50%;
 }
+.ProfileImage.dark-mode .contentPhoto{
+  border:2px solid #969696 ;
+}
 
  .profilePhoto {
-  
   position: absolute;
   top: 0;
   left: 0;
@@ -133,21 +147,10 @@
   pointer-events: none;
   border-radius: 50%;
 } 
-  
-
-@media (min-width: 768px) {
-  .header-content {
-    display: flex;
-  }
-}
 
 .head-introduction:hover {
   animation: vibrate 0.4s linear both;
 }
-
-/* .ProfileImage:hover {
-  animation: vibrate 0.7s linear both;
-} */
 
 @keyframes vibrate {
   0% {
