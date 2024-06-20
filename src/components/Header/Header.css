@@ -4,11 +4,11 @@
   left: 50%;
   transform: translateX(-50%);
   padding-bottom: 8px;
-  width: 45%;
+  width: 55%;
   margin: 0 auto;
-  max-width: 1200px;
-height: 100vh;
-  @media (max-width: 1200px) {
+  max-width: 758px;
+  height: 100vh;
+  @media (max-width: 1400px) {
     width: 70%;
   }
 
@@ -45,7 +45,7 @@ height: 100vh;
   flex-grow: 1;
   justify-content: center; /* Centra horizontalmente */
   align-items: center;
-  margin-top:20px;
+  margin-top: 20px;
 }
 .titleName {
   font-size: 2.5rem;
@@ -72,7 +72,6 @@ height: 100vh;
 }
 /*! Animation for Profile Imagen-----------------------  */
 .ProfileImage {
-  
   width: 150px;
   height: 150px;
   position: relative;
@@ -84,8 +83,8 @@ height: 100vh;
   align-items: center;
   justify-items: center;
 }
-.ProfileImage.dark-mode{
-  background-color : #969696 ;
+.ProfileImage.dark-mode {
+  background-color: #969696;
 }
 
 .ProfileImage::before {
@@ -96,10 +95,9 @@ height: 100vh;
   transition: 0.5s;
   animation: rotate 4s linear infinite;
 }
-.ProfileImage.dark-mode::before{
+.ProfileImage.dark-mode::before {
   background: linear-gradient(315deg, black, black);
 }
-
 
 .ProfileImage:hover::before {
   inset: -10px -10px;
@@ -122,21 +120,21 @@ height: 100vh;
   border-radius: 50%;
   z-index: 1;
 }
-.ProfileImage.dark-mode::after{
+.ProfileImage.dark-mode::after {
   background: rgb(255, 255, 255);
 }
-.contentPhoto{
+.contentPhoto {
   position: absolute;
   inset: 4px;
   border: 1px solid rgb(22, 22, 22);
-  z-index: 3;;
+  z-index: 3;
   border-radius: 50%;
 }
-.ProfileImage.dark-mode .contentPhoto{
-  border:2px solid #969696 ;
+.ProfileImage.dark-mode .contentPhoto {
+  border: 2px solid #969696;
 }
 
- .profilePhoto {
+.profilePhoto {
   position: absolute;
   top: 0;
   left: 0;
@@ -146,7 +144,7 @@ height: 100vh;
   transition: 0.5s;
   pointer-events: none;
   border-radius: 50%;
-} 
+}
 
 .head-introduction:hover {
   animation: vibrate 0.4s linear both;

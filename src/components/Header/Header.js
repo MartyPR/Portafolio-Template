@@ -4,6 +4,8 @@ import { ThemeContext } from "../ThemeContext";
 import logoWB from "../../assets/LogoWB.png";
 import Work from "../Work/Work";
 import Bio from "../Bio/Bio";
+import Services from "../Services/Services";
+import Skills from "../Skills/Skills";
 
 
 const Header = () => {
@@ -29,6 +31,8 @@ const Header = () => {
       </div>
       <Work/>
       <Bio/>
+      <Services/>
+      <Skills/>
     </div>
     
   );
