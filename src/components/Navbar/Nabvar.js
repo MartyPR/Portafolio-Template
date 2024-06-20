@@ -2,7 +2,7 @@ import React, { useContext, useState } from "react";
 import logo from "../../assets/Logo.png";
 import "./Nabvar.css";
 import { ThemeContext } from "../ThemeContext";
-
+import { Link } from "react-router-dom";
 const Nabvar = () => {
   const { darkMode, toggleDarkMode } = useContext(ThemeContext);
   const [menuOpen, setMenuOpen] = useState(false);
@@ -13,6 +13,7 @@ const Nabvar = () => {
 
   // }
 
+  
   const handleMenuToggle = () => {
     setMenuOpen(!menuOpen);
   };
@@ -20,21 +21,26 @@ const Nabvar = () => {
     <nav className={darkMode ? "SunMode" : ""}>
       <div className="navContainer">
         <div className="logoContainer">
-          <a className="nav-log">
+          <Link to='/' className="nav-log">
             <img className="logoImg" src={logo} alt="logo" />
             <span className="nameLogo">MartyPR</span>
-          </a>
+          </Link>
         </div>
 
         <div className="button-options">
           <div className="nav-links">
-            <a href="/Home">Works</a>
+            {/* <a href="/Home">Works</a> */}
+            <Link to='/' className="nav-link-title">Home</Link>
+            <Link to='/' className="nav-link-title">Contact</Link>
+            <Link to='/projects' className="nav-link-title"><i className="fa-solid fa-folder"></i> Projects</Link>
 
-            <a href="/">Linkedin</a>
+            <a href="https://www.linkedin.com/in/martin-parada-rodriguez/">
+              <i className="fa-brands fa-linkedin"></i> Linkedin
+            </a>
 
-            <a href="/Home">Projects</a>
-
-            <a href="/Home">Github</a>
+            <a href="/">
+              <i className="fa-brands fa-github"></i> Github
+            </a>
           </div>
           <div className="theme-toggle-button" onClick={toggleDarkMode}>
             {darkMode ? (

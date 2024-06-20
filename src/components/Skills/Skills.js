@@ -7,6 +7,7 @@ const Skills = () => {
   const { darkMode } = useContext(ThemeContext);
   const [skillMenuOpen_front, setSkillMenuOpen_front] = useState(false);
   const [skillMenuOpen_back, setSkillMenuOpen_back] = useState(false);
+  
   const handleMenuToggle_front = () => {
     setSkillMenuOpen_front(!skillMenuOpen_front);
   };
@@ -75,7 +76,7 @@ const Skills = () => {
             </div>
             <div
               className={`skills-content ${
-                skillMenuOpen_back ? "skills-close" : "skills-open"
+                skillMenuOpen_back ? "skills-open" : "skills-close"
               }`}
             >
               <div className="skills-header" onClick={handleMenuToggle_back}>

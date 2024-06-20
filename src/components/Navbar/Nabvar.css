@@ -42,6 +42,9 @@ nav {
   height: 30px;
   line-height: 20px;
   padding: 10px;
+  list-style: none;
+  text-decoration: none;
+  color: inherit;
 }
 .nav-log img {
   width: 40px;
@@ -125,7 +128,7 @@ nav {
 
 /**Media Mobile**/
 
-@media (max-width: 768px) {
+@media (max-width: 780px) {
   .nav-links {
     display: none;
   }
