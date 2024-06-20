@@ -8,15 +8,30 @@
   margin: 0 auto;
   max-width: 758px;
   height: 100vh;
+  animation: fadeIn 0.8s ease forwards;
+    
   @media (max-width: 1400px) {
     width: 80%;
   }
+  
 
   @media (max-width: 960px) {
     margin: 0;
     width: 100%;
   }
+  
 }
+@keyframes fadeIn {
+  0% {
+    
+    opacity: 0;
+  }
+  100% {
+   
+    opacity: 1;
+  }
+}
+
 .portafolio-content {
   padding: 20px;
 }
@@ -43,8 +58,9 @@
 }
 .project-title {
   margin: 0.5rem;
-  font-weight: normal;
+  font-weight: solid;
   color: #e73f3f;
+
 }
 .project-content {
   font-size: 16px;

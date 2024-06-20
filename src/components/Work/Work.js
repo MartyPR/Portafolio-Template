@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import "./Work.css";
 import { ThemeContext } from "../ThemeContext";
+import {Link} from "react-router-dom"
 const Work = () => {
 
   const { darkMode } = useContext(ThemeContext);
@@ -19,12 +20,12 @@ const Work = () => {
         software development.
       </p>
       <div className={`btn-portafolio ${darkMode ? "dark-mode":" "}`}>
-        <a>
+        <Link to='/projects' className="link-portafolio">
           My Portafolio
           <span>
             <i className="fa-solid fa-chevron-right"></i>
           </span>
-        </a>
+        </Link>
       </div>
     </div>
   );
