@@ -1,0 +1,33 @@
+.project-details-container {
+    position: absolute;
+    top: 5.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    padding-bottom: 8px;
+    width: 55%;
+    margin: 0 auto;
+    max-width: 758px;
+    height: 100vh;
+    animation: fadeIn 0.8s ease forwards;
+      
+    @media (max-width: 1400px) {
+      width: 80%;
+    }
+    
+  
+    @media (max-width: 960px) {
+      margin: 0;
+      width: 100%;
+    }
+    
+  }
+  @keyframes fadeIn {
+    0% {
+      
+      opacity: 0;
+    }
+    100% {
+     
+      opacity: 1;
+    }
+  }

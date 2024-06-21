@@ -8,6 +8,7 @@ import Services from "../Services/Services";
 import Skills from "../Skills/Skills";
 
 
+
 const Header = () => {
   const { darkMode } = useContext(ThemeContext);
 
@@ -33,6 +34,7 @@ const Header = () => {
       <Bio/>
       <Services/>
       <Skills/>
+     
     </div>
     
   );
